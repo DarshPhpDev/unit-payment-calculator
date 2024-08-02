@@ -34,7 +34,7 @@ function removeCommas(value) {
 function calculate(){
     if(totalPrice.value != "" && downPayment.value != "" && yearsOfInstallments.value != ""){
         if(unitArea.value != ""){
-            unitMeterPrice.innerHTML = parseInt(parseInt(removeCommas(totalPrice.value)) / parseInt(unitArea.value)) + ' EGP';
+            unitMeterPrice.innerHTML = formatNumberWithCommas(parseInt(parseInt(removeCommas(totalPrice.value)) / parseInt(unitArea.value))) + ' EGP';
         }else{
             unitMeterPrice.innerHTML = "";
         }
