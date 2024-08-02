@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Appartment Calculator</title>
+
+    <style>
+        * {
+            font-weight: 400;
+            font-family: sans-serif;
+        }
+
+        label,
+        h3,
+        th,
+        td {
+            color: #6f6f6f;
+        }
+
+        td {
+            font-weight: bold;
+        }
+
+        .page {
+            height: 100vh;
+        }
+
+        .calculator {
+            min-width: 800px;
+            padding: 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+        }
+
+        input {
+            outline: none !important;
+            color: #6f6f6f !important;
+        }
+
+        input:focus {
+            outline: none !important;
+            border: 1px solid #ced4da !important;
+            box-shadow: unset !important;
+        }
+
+        /* 
+        button:focus {
+            outline: none !important;
+            box-shadow: unset !important;
+        } */
+
+        table tr td {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page d-flex justify-content-center align-items-center">
+        <div class="calculator">
+            <h3 class="text-center mb-4">Unit Installments Calculator</h3>
+            <div class="form-group mb-3">
+                <label for="total" class="mb-2">Total Unit Price (EGP)</label>
+                <input type="text" class="form-control" placeholder="Ex. 3400000" id="totalPrice">
+            </div>
+            <div class="form-group mb-3">
+                <label for="total" class="mb-2">Down Payment (EGP)</label>
+                <input type="text" class="form-control" placeholder="Ex. 1000000" id="downPayment">
+            </div>
+            <div class="form-group mb-3">
+                <label for="total" class="mb-2">Years of Installments</label>
+                <input type="text" class="form-control" placeholder="Ex. 3" id="yearsOfInstallments">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="total" class="mb-2">Maximum Monthly Installment (Optional)</label>
+                <input type="text" class="form-control" placeholder="Ex. 35000" id="maximumMonthlyInstallment">
+            </div>
+            <div class="form-group mb-3">
+                <label for="total" class="mb-2">Years of Remaining Payment (Optional)</label>
+                <input type="text" class="form-control" placeholder="Ex. 2" id="yearsOfRemainingPayment">
+            </div>
+            <!-- <div class="d-grid gap-2">
+                <button class="btn btn-outline-success btn-block" id="calculateBtn">Calculate</button>
+            </div> -->
+
+            <table class="table table-bordered mt-5">
+                <tr>
+                    <th class="text-center">Monthly Installment</th>
+                    <th class="text-center">Quarter Installment</th>
+                    <th class="text-center">Remaining Payment</th>
+                    <th class="text-center">Remaining Payment Per Year</th>
+                </tr>
+                <tr>
+                    <td class="text-center text-success" id="MonthlyInstallmentVal"></td>
+                    <td class="text-center text-success" id="QuarterInstallmentVal"></td>
+                    <td class="text-center text-success" id="RemainingPaymentVal"></td>
+                    <td class="text-center text-success" id="RemainingPaymentPerYearVal"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
