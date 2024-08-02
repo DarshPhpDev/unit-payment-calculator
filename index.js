@@ -41,15 +41,15 @@ function calculate(){
         if(maximumMonthlyInstallment.value != ""){
             MonthlyInstallment = parseInt(removeCommas(maximumMonthlyInstallment.value));
             let remainingPayment = parseInt(afterDownPayment - (MonthlyInstallment * noOfMonths));
-            RemainingPaymentVal.innerHTML = formatNumberWithCommas(remainingPayment) + ' EGP';
+            RemainingPaymentVal.innerHTML = formatNumberWithCommas(remainingPayment) ;
             if(yearsOfRemainingPayment.value != ""){
-                RemainingPaymentPerYearVal.innerHTML = formatNumberWithCommas(parseInt(remainingPayment / parseInt(yearsOfRemainingPayment.value))) + ' EGP';
+                RemainingPaymentPerYearVal.innerHTML = formatNumberWithCommas(parseInt(remainingPayment / parseInt(yearsOfRemainingPayment.value))) ;
             }
         }else{
             MonthlyInstallment = parseInt(afterDownPayment / noOfMonths);
         }
-        MonthlyInstallmentVal.innerHTML = formatNumberWithCommas(MonthlyInstallment) + ' EGP';
-        QuarterInstallmentVal.innerHTML = formatNumberWithCommas(parseInt(MonthlyInstallment * 3)) + ' EGP';
+        MonthlyInstallmentVal.innerHTML = formatNumberWithCommas(MonthlyInstallment) ;
+        QuarterInstallmentVal.innerHTML = formatNumberWithCommas(parseInt(MonthlyInstallment * 3)) ;
     }
 }
 
