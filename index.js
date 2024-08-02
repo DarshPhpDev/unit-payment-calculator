@@ -8,6 +8,7 @@ let yearsOfRemainingPayment = document.getElementById('yearsOfRemainingPayment')
 let calculateBtn = document.getElementById('calculateBtn');
 
 
+let unitMeterPrice = document.getElementById('unitMeterPrice');
 let MonthlyInstallmentVal = document.getElementById('MonthlyInstallmentVal');
 let QuarterInstallmentVal = document.getElementById('QuarterInstallmentVal');
 let RemainingPaymentVal = document.getElementById('RemainingPaymentVal');
@@ -32,6 +33,12 @@ function removeCommas(value) {
 
 function calculate(){
     if(totalPrice.value != "" && downPayment.value != "" && yearsOfInstallments.value != ""){
+        if(unitArea.value != ""){
+            unitMeterPrice.innerHTML = parseInt(parseInt(removeCommas(totalPrice.value)) / parseInt(unitArea.value)) + ' EGP';
+        }else{
+            unitMeterPrice.innerHTML = "";
+        }
+
         let afterDownPayment =  removeCommas(totalPrice.value) 
                                     - 
                                 removeCommas(downPayment.value);

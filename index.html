@@ -88,9 +88,19 @@
     <div class="page d-flex justify-content-center align-items-center">
         <div class="calculator">
             <h3 class="text-center mb-4">Unit Payments Calculator</h3>
-            <div class="form-group mb-2">
-                <label for="total" class="mb-2">Total Unit Price (EGP)</label>
-                <input type="text" class="form-control" placeholder="Ex: 3400000" id="totalPrice">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group mb-2">
+                        <label for="total" class="mb-2">Unit Area (M<sup>2</sup>)</label>
+                        <input type="text" class="form-control" placeholder="Ex: 220" id="unitArea">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group mb-2">
+                        <label for="total" class="mb-2">Total Unit Price (EGP)</label>
+                        <input type="text" class="form-control" placeholder="Ex: 3400000" id="totalPrice">
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-6">
@@ -121,6 +131,10 @@
 
             <table class="table table-bordered mt-3">
                 <tr>
+                    <th class="text-center">Unit M<sup>2</sup> Price</th>
+                    <td class="text-center text-success" id="unitMeterPrice"></td>
+                </tr>
+                <tr>
                     <th class="text-center">Monthly Installment</th>
                     <td class="text-center text-success" id="MonthlyInstallmentVal"></td>
                 </tr>
@@ -142,7 +156,7 @@
     </div>
 
 
-    <script src="index:js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
