@@ -25,12 +25,16 @@
             font-weight: bold;
         }
 
+        th {
+            width: 70%;
+        }
+
         .page {
             height: 100vh;
         }
 
         .calculator {
-            min-width: 800px;
+            width: 800px;
             padding: 1rem;
             border: 1px solid #dee2e6;
             border-radius: 12px;
@@ -55,6 +59,13 @@
 
         table tr td {
             height: 40px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .calculator {
+                width: 90%;
+            }
+
         }
     </style>
 </head>
@@ -92,14 +103,19 @@
             <table class="table table-bordered mt-5">
                 <tr>
                     <th class="text-center">Monthly Installment</th>
-                    <th class="text-center">Quarter Installment</th>
-                    <th class="text-center">Remaining Payment</th>
-                    <th class="text-center">Remaining Payment Per Year</th>
+                    <td class="text-center text-success" id="MonthlyInstallmentVal"></td>
                 </tr>
                 <tr>
-                    <td class="text-center text-success" id="MonthlyInstallmentVal"></td>
+                    <th class="text-center">Quarter Installment</th>
                     <td class="text-center text-success" id="QuarterInstallmentVal"></td>
+                </tr>
+                <tr>
+                    <th class="text-center">Remaining Payment</th>
                     <td class="text-center text-success" id="RemainingPaymentVal"></td>
+                </tr>
+
+                <tr>
+                    <th class="text-center">Remaining Payment/Year</th>
                     <td class="text-center text-success" id="RemainingPaymentPerYearVal"></td>
                 </tr>
             </table>
